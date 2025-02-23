@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/furry-schedule-schema.json",
+  "title": "Furry Schedule Schema (Master)",
+  "type": "object",
+
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "vendorId": { "type": "string" },
+        "appVersion": { "type": "string" },
+        "lastModifiedBy": { "type": "string" },
+        "lastModifiedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": true
+    },
+    "convention": {
+      "$ref": "convention.schema.json"
+    },
+    "membershipLevels": {
+      "$ref": "membershipLevels.schema.json"
+    },
+    "tracks": {
+      "$ref": "tracks.schema.json"
+    },
+    "eventTypes": {
+      "$ref": "eventTypes.schema.json"
+    },
+    "labels": {
+      "$ref": "labels.schema.json"
+    },
+    "venues": {
+      "$ref": "venues.schema.json"
+    },
+    "participants": {
+      "$ref": "participants.schema.json"
+    },
+    "events": {
+      "$ref": "events.schema.json"
+    }
+  },
+
+  "required": [
+    "schemaVersion",
+    "updatedAt",
+    "convention",
+    "membershipLevels",
+    "tracks",
+    "eventTypes",
+    "labels",
+    "venues",
+    "participants",
+    "events"
+  ],
+
+  "additionalProperties": false
+}

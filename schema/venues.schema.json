@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/venues.schema.json",
+  "title": "Venues Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "name": {
+        "type": "object",
+        "patternProperties": {
+          "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
+        }
+      },
+      "address": {
+        "type": "object",
+        "patternProperties": {
+          "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
+        }
+      },
+      "rooms": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "name": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
+              }
+            },
+            "capacity": {
+              "type": "integer"
+            }
+          },
+          "required": ["id", "name"],
+          "additionalProperties": true
+        }
+      }
+    },
+    "required": ["id", "name", "rooms"],
+    "additionalProperties": false
+  }
+}

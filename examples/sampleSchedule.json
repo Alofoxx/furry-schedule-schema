@@ -1,0 +1,290 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "3030-07-01T12:00:00Z",
+  "source": {
+    "name": "ConSchedulePro",
+    "vendorId": "CSP-12345",
+    "appVersion": "2.4.1",
+    "lastModifiedBy": "Jane Doe",
+    "lastModifiedAt": "3030-07-01T12:00:00Z"
+  },
+  "convention": {
+    "id": "fuzzyTestCon3030",
+    "name": {
+      "en-US": "Fuzzy Test Con 3030"
+    },
+    "location": {
+      "en-US": "Furtown Convention Center, Furville"
+    },
+    "startDate": "3030-08-01T00:00:00Z",
+    "endDate": "3030-08-03T23:59:59Z",
+    "timezone": "America/New_York",
+    "description": {
+      "en-US": "A futuristic furry convention for all species!"
+    },
+    "website": "https://fuzzytestcon.example.org",
+    "imageBannerUrl": "https://cdn.example.org/banners/fuzzycon3030.jpg"
+  },
+  "membershipLevels": [
+    {
+      "id": "attendee",
+      "name": {
+        "en-US": "Attendee"
+      },
+      "description": {
+        "en-US": "Standard membership level."
+      }
+    },
+    {
+      "id": "sponsor",
+      "name": {
+        "en-US": "Sponsor"
+      },
+      "description": {
+        "en-US": "Enhanced membership perks."
+      }
+    },
+    {
+      "id": "superSponsor",
+      "name": {
+        "en-US": "Super Sponsor"
+      },
+      "description": {
+        "en-US": "Top-tier membership with exclusive benefits."
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "artTrack",
+      "name": {
+        "en-US": "Art Track"
+      },
+      "description": {
+        "en-US": "Panels and workshops related to drawing, painting, crafts."
+      }
+    },
+    {
+      "id": "writingTrack",
+      "name": {
+        "en-US": "Writing Track"
+      },
+      "description": {
+        "en-US": "Events focused on creative writing and story crafting."
+      }
+    }
+  ],
+  "eventTypes": [
+    {
+      "id": "panel",
+      "name": {
+        "en-US": "Panel"
+      },
+      "description": {
+        "en-US": "A talk or discussion with one or more panelists."
+      }
+    },
+    {
+      "id": "workshop",
+      "name": {
+        "en-US": "Workshop"
+      },
+      "description": {
+        "en-US": "Hands-on sessions for learning new skills."
+      }
+    },
+    {
+      "id": "meetup",
+      "name": {
+        "en-US": "Meetup"
+      },
+      "description": {
+        "en-US": "Casual gathering around a common interest."
+      }
+    }
+  ],
+  "labels": [
+    {
+      "id": "18plus",
+      "name": {
+        "en-US": "18+"
+      },
+      "description": {
+        "en-US": "Restricted to attendees age 18 and older."
+      },
+      "category": "rating"
+    },
+    {
+      "id": "aslInterpretation",
+      "name": {
+        "en-US": "ASL Interpretation"
+      },
+      "description": {
+        "en-US": "An ASL interpreter will be present."
+      },
+      "category": "accessibility"
+    },
+    {
+      "id": "ticketed",
+      "name": {
+        "en-US": "Ticketed Event"
+      },
+      "description": {
+        "en-US": "Requires a separate ticket purchase."
+      },
+      "category": "admission"
+    }
+  ],
+  "venues": [
+    {
+      "id": "conventionCenter",
+      "name": {
+        "en-US": "Furtown Convention Center"
+      },
+      "address": {
+        "en-US": "123 Fur Ave, Furville"
+      },
+      "rooms": [
+        {
+          "id": "mainHall",
+          "name": {
+            "en-US": "Main Hall"
+          },
+          "capacity": 500
+        },
+        {
+          "id": "artRoom",
+          "name": {
+            "en-US": "Art Room"
+          },
+          "capacity": 100
+        }
+      ]
+    },
+    {
+      "id": "furCafe",
+      "name": {
+        "en-US": "Fur Café (Off-Site)"
+      },
+      "address": {
+        "en-US": "999 Coffee St, Furville"
+      },
+      "rooms": [
+        {
+          "id": "backPatio",
+          "name": {
+            "en-US": "Back Patio"
+          }
+        }
+      ]
+    }
+  ],
+  "participants": [
+    {
+      "id": "p-001",
+      "displayName": "Alofoxx",
+      "socials": [
+        {
+          "label": "Twitter",
+          "url": "https://twitter.example.org/alofoxx"
+        },
+        {
+          "label": "Website",
+          "url": "https://alofoxx.example.org"
+        }
+      ],
+      "imageBannerUrl": "https://cdn.example.org/photos/alofoxx-banner.jpg"
+    },
+    {
+      "id": "p-002",
+      "displayName": "Alofoxx’s Guest",
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://instagram.example.org/alofoxx"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "evt-100",
+      "title": {
+        "en-US": "Wolf Roundtable"
+      },
+      "description": {
+        "en-US": "A casual meetup for wolves and wolf enthusiasts."
+      },
+      "startTime": "3030-08-01T10:00:00-04:00",
+      "endTime": "3030-08-01T11:00:00-04:00",
+      "venueId": "conventionCenter",
+      "roomId": "mainHall",
+      "typeId": "meetup",
+      "trackId": null,
+      "labelIds": [],
+      "participantIds": ["p-002"],
+      "allowedMemberships": ["attendee", "sponsor", "superSponsor"],
+      "minAge": 0,
+      "ticketed": false,
+      "imageBannerUrl": "https://cdn.example.org/event-banners/wolf-roundtable.png",
+      "buttons": [
+        {
+          "name": "RSVP",
+          "url": "https://rsvp.example.org/event/wolf-roundtable"
+        }
+      ],
+      "source": {
+        "vendorId": "Vendor-Sys-XYZ",
+        "appVersion": "1.0.3",
+        "lastModifiedBy": "VendorBot"
+      }
+    },
+    {
+      "id": "evt-101",
+      "title": {
+        "en-US": "Painting Techniques"
+      },
+      "description": {
+        "en-US": "Workshop on painting anthropomorphic characters."
+      },
+      "startTime": "3030-08-01T14:00:00-04:00",
+      "endTime": "3030-08-01T16:00:00-04:00",
+      "venueId": "conventionCenter",
+      "roomId": "artRoom",
+      "typeId": "workshop",
+      "trackId": "artTrack",
+      "labelIds": ["aslInterpretation"],
+      "participantIds": ["p-001"],
+      "allowedMemberships": ["attendee", "sponsor", "superSponsor"],
+      "minAge": 0,
+      "ticketed": false,
+      "buttons": []
+    },
+    {
+      "id": "evt-102",
+      "title": {
+        "en-US": "Night Howl Social (18+)"
+      },
+      "description": {
+        "en-US": "An after-dark social event for adult attendees."
+      },
+      "startTime": "3030-08-01T23:00:00-04:00",
+      "endTime": "3030-08-02T01:00:00-04:00",
+      "venueId": "furCafe",
+      "roomId": "backPatio",
+      "typeId": "panel",
+      "trackId": null,
+      "labelIds": ["18plus", "ticketed"],
+      "participantIds": [],
+      "allowedMemberships": ["attendee", "sponsor", "superSponsor"],
+      "minAge": 18,
+      "ticketed": true,
+      "buttons": [
+        {
+          "name": "Buy Ticket",
+          "url": "https://tickets.example.org/event/night-howl"
+        }
+      ]
+    }
+  ]
+}

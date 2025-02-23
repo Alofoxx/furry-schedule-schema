@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/participants.schema.json",
+  "title": "Participants Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "displayName": { "type": "string" },
+      "socials": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": { "type": "string" },
+            "url": { "type": "string", "format": "uri" }
+          },
+          "required": ["label", "url"],
+          "additionalProperties": false
+        }
+      },
+      "imageBannerUrl": {
+        "type": "string",
+        "format": "uri",
+        "description": "Optional participant banner image URL."
+      }
+    },
+    "required": ["id", "displayName"],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/convention.schema.json",
+  "title": "Convention Info Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
+      },
+      "minProperties": 1,
+      "description": "Localized convention names keyed by i18n language codes."
+    },
+    "location": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
+      }
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "description": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
+      }
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    },
+    "imageBannerUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Optional link to a banner or logo image."
+    }
+  },
+  "required": ["id", "name", "startDate", "endDate", "timezone"],
+  "additionalProperties": false
+}
