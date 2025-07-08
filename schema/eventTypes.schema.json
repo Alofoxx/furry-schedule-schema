@@ -1,25 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/eventTypes.schema.json",
-  "title": "Event Types Schema",
+  "$id": "eventTypes.schema.json",
+  "title": "EventTypes",
   "type": "array",
   "items": {
-    "type": "object",
-    "properties": {
-      "id": { "type": "string" },
-      "name": {
-        "type": "object",
-        "patternProperties": {
-          "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
-        }
-      },
-      "description": {
-        "type": "object",
-        "patternProperties": {
-          "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
-        }
-      }
-    },
-    "required": ["id", "name"]
+    "$ref": "entity/eventType.schema.json"
   }
 }

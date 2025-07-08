@@ -9,11 +9,11 @@ This document provides **detailed field references** for each part of the Furry 
 - **schemaVersion** (string): The version of this schema (e.g., `"1.0.0"`).
 - **updatedAt** (datetime, ISO 8601): Timestamp when the JSON was last updated.
 - **source** (object, optional):
-    - `name`: Human-readable name of the data source (e.g., `"ConSchedulePro"`).
-    - `vendorId`: An internal ID for the data provider.
-    - `appVersion`: Version of the software generating the data.
-    - `lastModifiedBy`: Username or individual who last modified the data.
-    - `lastModifiedAt`: Timestamp when the data was last modified.
+  - `name`: Human-readable name of the data source (e.g., `"ConSchedulePro"`).
+  - `vendorId`: An internal ID for the data provider.
+  - `appVersion`: Version of the software generating the data.
+  - `lastModifiedBy`: Username or individual who last modified the data.
+  - `lastModifiedAt`: Timestamp when the data was last modified.
 
 ## convention (object)
 
@@ -63,15 +63,21 @@ Additional flags or classifications (e.g., `"18plus"`, `"ticketed"`, `"aslInterp
 
 ## venues (array)
 
-Locations where events are held. Each venue contains multiple rooms:
+Locations where events are held:
 
 - **id** (string)
 - **name** (object): Localized
 - **address** (object, optional): Localized
-- **rooms** (array of objects):
-    - **id** (string)
-    - **name** (object): Localized
-    - **capacity** (integer, optional)
+
+## rooms (array)
+
+Rooms where events take place, each associated with a venue:
+
+- **id** (string): Unique room ID.
+- **name** (object): Localized room name.
+- **venueId** (string): ID of the venue this room belongs to.
+- **capacity** (integer, optional): Approximate room capacity.
+- **description** (string, optional): Human-readable notes or comments.
 
 ## participants (array)
 
@@ -80,7 +86,7 @@ People or groups who host, present, or perform at events:
 - **id** (string)
 - **displayName** (string)
 - **socials** (array, optional):
-    - Each item is an object with `label` (string) and `url` (uri).
+  - Each item is an object with `label` (string) and `url` (uri).
 - **imageBannerUrl** (uri, optional): Banner image for the participant.
 
 ## events (array)
@@ -92,7 +98,7 @@ Schedule entries:
 - **description** (object, optional): Localized dictionary.
 - **startTime**, **endTime** (datetime, ISO 8601).
 - **venueId** (string): Links to a venue by its `id`.
-- **roomId** (string): Links to a room within the venue.
+- **roomId** (string): Links to a room by its `id`.
 - **typeId** (string): Links to an entry in `eventTypes`.
 - **trackId** (string or null, optional): Links to an entry in `tracks`.
 - **labelIds** (array of strings): Zero or more `id` values from `labels`.
@@ -102,8 +108,8 @@ Schedule entries:
 - **ticketed** (boolean, optional): If the event requires a separate ticket.
 - **imageBannerUrl** (string, optional): Link to an event banner image.
 - **buttons** (array, optional): List of call-to-action objects, each with:
-    - `name` (string)
-    - `url` (uri)
+  - `name` (string)
+  - `url` (uri)
 - **source** (object, optional): Overridden or additional event-level metadata (similar fields as top-level `source`).
 
 ---

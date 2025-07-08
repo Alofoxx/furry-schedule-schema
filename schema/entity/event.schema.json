@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "entity/event.schema.json",
+  "title": "Event",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "startTime",
+    "endTime",
+    "roomId",
+    "venueId",
+    "typeId",
+    "allowedMemberships",
+    "ticketed"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z]{2}(-[A-Z]{2})?$": {
+          "type": "string"
+        }
+      }
+    },
+    "description": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z]{2}(-[A-Z]{2})?$": {
+          "type": "string"
+        }
+      }
+    },
+    "startTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "venueId": {
+      "type": "string"
+    },
+    "roomId": {
+      "type": "string"
+    },
+    "typeId": {
+      "type": "string"
+    },
+    "trackId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "labelIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "participantIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowedMemberships": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "minAge": {
+      "type": "integer"
+    },
+    "ticketed": {
+      "type": "boolean"
+    },
+    "buttons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "name",
+          "url"
+        ]
+      }
+    },
+    "imageBannerUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "vendorId": {
+          "type": "string"
+        },
+        "appVersion": {
+          "type": "string"
+        },
+        "lastModifiedBy": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
