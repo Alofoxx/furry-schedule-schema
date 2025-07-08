@@ -44,6 +44,9 @@
     "venues": {
       "$ref": "venues.schema.json"
     },
+    "rooms": {
+      "$ref": "room.schema.json"
+    },
     "participants": {
       "$ref": "participants.schema.json"
     },

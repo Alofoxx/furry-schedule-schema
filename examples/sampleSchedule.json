@@ -143,23 +143,7 @@
       },
       "address": {
         "en-US": "123 Fur Ave, Furville"
-      },
-      "rooms": [
-        {
-          "id": "mainHall",
-          "name": {
-            "en-US": "Main Hall"
-          },
-          "capacity": 500
-        },
-        {
-          "id": "artRoom",
-          "name": {
-            "en-US": "Art Room"
-          },
-          "capacity": 100
-        }
-      ]
+      }
     },
     {
       "id": "furCafe",
@@ -168,15 +152,32 @@
       },
       "address": {
         "en-US": "999 Coffee St, Furville"
+      }
+    }
+  ],
+  "rooms": [
+    {
+      "id": "mainHall",
+      "name": {
+        "en-US": "Main Hall"
       },
-      "rooms": [
-        {
-          "id": "backPatio",
-          "name": {
-            "en-US": "Back Patio"
-          }
-        }
-      ]
+      "capacity": 500,
+      "venueId": "conventionCenter"
+    },
+    {
+      "id": "artRoom",
+      "name": {
+        "en-US": "Art Room"
+      },
+      "capacity": 100,
+      "venueId": "conventionCenter"
+    },
+    {
+      "id": "backPatio",
+      "name": {
+        "en-US": "Back Patio"
+      },
+      "venueId": "furCafe"
     }
   ],
   "participants": [
