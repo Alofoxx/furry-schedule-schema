@@ -47,8 +47,8 @@
     "rooms": {
       "$ref": "room.schema.json"
     },
-    "participants": {
-      "$ref": "participants.schema.json"
+    "hosts": {
+      "$ref": "hosts.schema.json"
     },
     "events": {
       "$ref": "events.schema.json"
@@ -64,7 +64,7 @@
     "eventTypes",
     "labels",
     "venues",
-    "participants",
+    "hosts",
     "events"
   ],
 

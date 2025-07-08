@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "entity/participant.schema.json",
-  "title": "Participant",
+  "$id": "entity/host.schema.json",
+  "title": "Host",
   "type": "object",
   "required": [
     "id",

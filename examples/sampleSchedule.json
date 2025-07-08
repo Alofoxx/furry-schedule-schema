@@ -180,7 +180,7 @@
       "venueId": "furCafe"
     }
   ],
-  "participants": [
+  "hosts": [
     {
       "id": "p-001",
       "displayName": "Alofoxx",
@@ -223,7 +223,7 @@
       "typeId": "meetup",
       "trackId": null,
       "labelIds": [],
-      "participantIds": ["p-002"],
+      "hostIds": ["p-002"],
       "allowedMemberships": ["attendee", "sponsor", "superSponsor"],
       "minAge": 0,
       "ticketed": false,
@@ -255,7 +255,7 @@
       "typeId": "workshop",
       "trackId": "artTrack",
       "labelIds": ["aslInterpretation"],
-      "participantIds": ["p-001"],
+      "hostIds": ["p-001"],
       "allowedMemberships": ["attendee", "sponsor", "superSponsor"],
       "minAge": 0,
       "ticketed": false,
@@ -276,7 +276,7 @@
       "typeId": "panel",
       "trackId": null,
       "labelIds": ["18plus", "ticketed"],
-      "participantIds": [],
+      "hostIds": [],
       "allowedMemberships": ["attendee", "sponsor", "superSponsor"],
       "minAge": 18,
       "ticketed": true,

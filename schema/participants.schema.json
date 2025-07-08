@@ -1,9 +1,0 @@
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "participants.schema.json",
-  "title": "Participants",
-  "type": "array",
-  "items": {
-    "$ref": "entity/participant.schema.json"
-  }
-}
