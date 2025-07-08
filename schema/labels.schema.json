@@ -1,27 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/labels.schema.json",
-  "title": "Labels Schema",
+  "$id": "labels.schema.json",
+  "title": "Labels",
   "type": "array",
   "items": {
-    "type": "object",
-    "properties": {
-      "id": { "type": "string" },
-      "name": {
-        "type": "object",
-        "patternProperties": {
-          "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
-        }
-      },
-      "description": {
-        "type": "object",
-        "patternProperties": {
-          "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
-        }
-      },
-      "category": { "type": "string" }
-    },
-    "required": ["id", "name"],
-    "additionalProperties": false
+    "$ref": "entity/label.schema.json"
   }
 }

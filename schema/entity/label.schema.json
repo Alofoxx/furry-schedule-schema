@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "entity/label.schema.json",
+  "title": "Label",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "category"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z]{2}(-[A-Z]{2})?$": {
+          "type": "string"
+        }
+      }
+    },
+    "description": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z]{2}(-[A-Z]{2})?$": {
+          "type": "string"
+        }
+      }
+    },
+    "category": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

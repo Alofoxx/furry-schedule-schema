@@ -1,20 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "room.schema.json",
-  "title": "Room",
-  "type": "object",
-  "required": ["id", "name", "venueId"],
-  "properties": {
-    "id": { "type": "string" },
-    "name": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-z]{2}(-[A-Z]{2})?$": { "type": "string" }
-      }
-    },
-    "venueId": { "type": "string" },
-    "capacity": { "type": "integer" },
-    "description": { "type": "string" }
-  },
-  "additionalProperties": true
+  "$id": "rooms.schema.json",
+  "title": "Rooms",
+  "type": "array",
+  "items": {
+    "$ref": "entity/room.schema.json"
+  }
 }
