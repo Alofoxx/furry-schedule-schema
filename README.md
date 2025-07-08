@@ -11,7 +11,7 @@ The **Furry Schedule Schema** provides a JSON-based data structure for:
 - Event types (e.g., Panel, Workshop)
 - Labels (e.g., 18+, ticketed, accessibility flags)
 - Venues and rooms
-- Participants (panelists, performers, etc.)
+- Hosts (panelists, performers, etc.)
 - Scheduled events
 
 ## Why Use This Schema?

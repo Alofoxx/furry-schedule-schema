@@ -63,7 +63,7 @@
         "type": "string"
       }
     },
-    "participantIds": {
+    "hostIds": {
       "type": "array",
       "items": {
         "type": "string"

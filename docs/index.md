@@ -79,7 +79,7 @@ Rooms where events take place, each associated with a venue:
 - **capacity** (integer, optional): Approximate room capacity.
 - **description** (string, optional): Human-readable notes or comments.
 
-## participants (array)
+## hosts (array)
 
 People or groups who host, present, or perform at events:
 
@@ -87,7 +87,7 @@ People or groups who host, present, or perform at events:
 - **displayName** (string)
 - **socials** (array, optional):
   - Each item is an object with `label` (string) and `url` (uri).
-- **imageBannerUrl** (uri, optional): Banner image for the participant.
+- **imageBannerUrl** (uri, optional): Banner image for the host.
 
 ## events (array)
 
@@ -102,7 +102,7 @@ Schedule entries:
 - **typeId** (string): Links to an entry in `eventTypes`.
 - **trackId** (string or null, optional): Links to an entry in `tracks`.
 - **labelIds** (array of strings): Zero or more `id` values from `labels`.
-- **participantIds** (array of strings): Zero or more `id` values from `participants`.
+- **hostIds** (array of strings): Zero or more `id` values from `participants`.
 - **allowedMemberships** (array of strings): Which membership levels can attend.
 - **minAge** (integer, optional): Minimum required age (default 0).
 - **ticketed** (boolean, optional): If the event requires a separate ticket.
