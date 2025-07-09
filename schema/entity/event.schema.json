@@ -6,10 +6,7 @@
   "required": [
     "id",
     "title",
-    "startTime",
-    "endTime",
-    "roomId",
-    "venueId",
+    "timeSlots",
     "typeId",
     "allowedMemberships",
     "ticketed"
@@ -33,20 +30,6 @@
           "type": "string"
         }
       }
-    },
-    "startTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "endTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "venueId": {
-      "type": "string"
-    },
-    "roomId": {
-      "type": "string"
     },
     "typeId": {
       "type": "string"
@@ -103,6 +86,24 @@
     "imageBannerUrl": {
       "type": "string",
       "format": "uri"
+    },
+    "timeSlots": {
+      "type": "array",
+      "description": "All time/location slots for the event",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["startTime", "endTime", "venueId", "roomId"],
+        "properties": {
+          "startTime": { "type": "string", "format": "date-time" },
+          "endTime": { "type": "string", "format": "date-time" },
+          "venueId": { "type": "string" },
+          "roomId": { "type": "string" },
+          "x-meta": {
+            "$ref": "../partials/x-meta.schema.json"
+          }
+        }
+      }
     },
     "source": {
       "type": "object",
