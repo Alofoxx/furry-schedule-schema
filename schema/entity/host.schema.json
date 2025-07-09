@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "entity/host.schema.json",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/entity/host.schema.json",
   "title": "Host",
   "type": "object",
   "required": [
@@ -36,7 +36,10 @@
     "imageBannerUrl": {
       "type": "string",
       "format": "uri"
+    },
+    "x-meta": {
+      "$ref": "../partials/x-meta.schema.json"
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "rooms.schema.json",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/rooms.schema.json",
   "title": "Rooms",
   "type": "array",
   "items": {

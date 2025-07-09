@@ -14,6 +14,8 @@ This document provides **detailed field references** for each part of the Furry 
   - `appVersion`: Version of the software generating the data.
   - `lastModifiedBy`: Username or individual who last modified the data.
   - `lastModifiedAt`: Timestamp when the data was last modified.
+- **x-meta** (object, optional): External application-defined metadata. May contain arbitrary keys and values. Ignored by core schema validation.
+
 
 ## convention (object)
 
@@ -27,6 +29,7 @@ Represents basic convention information:
 - **description** (object): Localized descriptions.
 - **website** (uri, optional): Link to the convention’s website.
 - **imageBannerUrl** (uri, optional): Banner or logo image for the convention.
+- **x-meta** (object, optional): External application-defined metadata.
 
 ## membershipLevels (array)
 
@@ -35,6 +38,7 @@ A list of membership levels (Attendee, Sponsor, etc.):
 - **id** (string): Unique ID for the level.
 - **name** (object): Localized names.
 - **description** (object, optional): Localized descriptions.
+- **x-meta** (object, optional): External application-defined metadata.
 
 ## tracks (array)
 
@@ -43,6 +47,7 @@ A list of broad subject areas (e.g., Art Track, Writing Track):
 - **id** (string)
 - **name** (object): Localized
 - **description** (object, optional): Localized
+- **x-meta** (object, optional): External application-defined metadata.
 
 ## eventTypes (array)
 
@@ -51,6 +56,7 @@ High-level categories (e.g., Panel, Workshop, Meetup):
 - **id** (string)
 - **name** (object): Localized
 - **description** (object, optional): Localized
+- **x-meta** (object, optional): External application-defined metadata.
 
 ## labels (array)
 
@@ -60,6 +66,7 @@ Additional flags or classifications (e.g., `"18plus"`, `"ticketed"`, `"aslInterp
 - **name** (object): Localized
 - **description** (object, optional): Localized
 - **category** (string, optional): For grouping or filtering labels (e.g., `"rating"`, `"accessibility"`, etc.)
+- **x-meta** (object, optional): External application-defined metadata.
 
 ## venues (array)
 
@@ -78,6 +85,7 @@ Rooms where events take place, each associated with a venue:
 - **venueId** (string): ID of the venue this room belongs to.
 - **capacity** (integer, optional): Approximate room capacity.
 - **description** (string, optional): Human-readable notes or comments.
+- **x-meta** (object, optional): External application-defined metadata.
 
 ## hosts (array)
 
@@ -88,6 +96,7 @@ People or groups who host, present, or perform at events:
 - **socials** (array, optional):
   - Each item is an object with `label` (string) and `url` (uri).
 - **imageBannerUrl** (uri, optional): Banner image for the host.
+- **x-meta** (object, optional): External application-defined metadata.
 
 ## events (array)
 
@@ -111,6 +120,7 @@ Schedule entries:
   - `name` (string)
   - `url` (uri)
 - **source** (object, optional): Overridden or additional event-level metadata (similar fields as top-level `source`).
+- **x-meta** (object, optional): External application-defined metadata.
 
 ---
 
