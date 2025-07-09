@@ -1,0 +1,30 @@
+name: Validate Schedule Schema
+
+on:
+  pull_request:
+    paths:
+      - '**.json'
+      - 'schema/**'
+      - 'examples/**'
+      - 'validate.js'
+      - 'package.json'
+      - 'package-lock.json'
+
+jobs:
+  validate-schema:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run schema validation
+        run: npm run validate
