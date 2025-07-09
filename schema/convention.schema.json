@@ -46,6 +46,9 @@
       "type": "string",
       "format": "uri",
       "description": "Optional link to a banner or logo image."
+    },
+    "x-meta": {
+      "$ref": "partials/x-meta.schema.json"
     }
   },
   "required": ["id", "name", "startDate", "endDate", "timezone"],

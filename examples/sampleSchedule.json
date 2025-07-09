@@ -238,6 +238,9 @@
         "vendorId": "Vendor-Sys-XYZ",
         "appVersion": "1.0.3",
         "lastModifiedBy": "VendorBot"
+      },
+      "x-meta": {
+        "badgeLevel": "CustomDataForExternalApps"
       }
     },
     {

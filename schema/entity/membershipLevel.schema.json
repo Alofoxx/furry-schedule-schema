@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "entity/membershipLevel.schema.json",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/entity/membershipLevel.schema.json",
   "title": "MembershipLevel",
   "type": "object",
   "required": [
@@ -26,7 +26,10 @@
           "type": "string"
         }
       }
+    },
+    "x-meta": {
+      "$ref": "../partials/x-meta.schema.json"
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }
