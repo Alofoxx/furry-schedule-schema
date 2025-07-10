@@ -99,6 +99,11 @@
           "endTime": { "type": "string", "format": "date-time" },
           "venueId": { "type": "string" },
           "roomId": { "type": "string" },
+          "roomAliasIds": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Optional list of alternative room IDs used for this time slot. Useful for events spanning multiple spaces or when multiple room names apply."
+          },
           "x-meta": {
             "$ref": "../partials/x-meta.schema.json"
           }

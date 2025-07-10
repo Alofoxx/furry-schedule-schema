@@ -105,9 +105,13 @@ Schedule entries:
 - **id** (string): Unique event ID.
 - **title** (object): Localized dictionary.
 - **description** (object, optional): Localized dictionary.
-- **startTime**, **endTime** (datetime, ISO 8601).
-- **venueId** (string): Links to a venue by its `id`.
-- **roomId** (string): Links to a room by its `id`.
+- **timeSlots** (array): List of one or more times this event is occurring. Each item must include:
+  - `startTime` (datetime, ISO 8601)
+  - `endTime` (datetime, ISO 8601)
+  - `venueId` (string): Links to a venue by its `id`.
+  - `roomId` (string): Links to a room by its `id`. The primary room this slot takes place in (e.g., 100AB or 'Main Events').
+  - `roomAliasIds` (array of strings, optional): Alternate room IDs relevant for search or discovery. Useful when an event spans multiple rooms (e.g., 100A + 100B).
+  - `x-meta` (object, optional): Application-defined metadata per time slot.
 - **typeId** (string): Links to an entry in `eventTypes`.
 - **trackId** (string or null, optional): Links to an entry in `tracks`.
 - **labelIds** (array of strings): Zero or more `id` values from `labels`.
