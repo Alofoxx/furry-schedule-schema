@@ -1,15 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "entity/event.schema.json",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/entity/event.schema.json",
   "title": "Event",
   "type": "object",
   "required": [
     "id",
     "title",
-    "startTime",
-    "endTime",
-    "roomId",
-    "venueId",
+    "timeSlots",
     "typeId",
     "allowedMemberships",
     "ticketed"
@@ -33,20 +30,6 @@
           "type": "string"
         }
       }
-    },
-    "startTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "endTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "venueId": {
-      "type": "string"
-    },
-    "roomId": {
-      "type": "string"
     },
     "typeId": {
       "type": "string"
@@ -104,6 +87,29 @@
       "type": "string",
       "format": "uri"
     },
+    "timeSlots": {
+      "type": "array",
+      "description": "All time/location slots for the event",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["startTime", "endTime", "venueId", "roomId"],
+        "properties": {
+          "startTime": { "type": "string", "format": "date-time" },
+          "endTime": { "type": "string", "format": "date-time" },
+          "venueId": { "type": "string" },
+          "roomId": { "type": "string" },
+          "roomAliasIds": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Optional list of alternative room IDs used for this time slot. Useful for events spanning multiple spaces or when multiple room names apply."
+          },
+          "x-meta": {
+            "$ref": "../partials/x-meta.schema.json"
+          }
+        }
+      }
+    },
     "source": {
       "type": "object",
       "properties": {
@@ -118,7 +124,10 @@
         }
       },
       "additionalProperties": true
+    },
+    "x-meta": {
+      "$ref": "../partials/x-meta.schema.json"
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }

@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/partials/x-meta.schema.json",
+  "title": "x-meta",
+  "description": "Optional application-specific metadata",
+  "type": "object",
+  "additionalProperties": true
+}

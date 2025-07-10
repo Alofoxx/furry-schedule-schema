@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "venues.schema.json",
+  "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/venues.schema.json",
   "title": "Venues",
   "type": "array",
   "items": {

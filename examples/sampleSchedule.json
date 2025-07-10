@@ -216,10 +216,26 @@
       "description": {
         "en-US": "A casual meetup for wolves and wolf enthusiasts."
       },
-      "startTime": "3030-08-01T10:00:00-04:00",
-      "endTime": "3030-08-01T11:00:00-04:00",
-      "venueId": "conventionCenter",
-      "roomId": "mainHall",
+      "timeSlots": [
+        {
+          "startTime": "3030-08-01T10:00:00-04:00",
+          "endTime": "3030-08-01T11:00:00-04:00",
+          "venueId": "conventionCenter",
+          "roomId": "mainHall"
+        },
+        {
+          "startTime": "3030-08-01T14:00:00-04:00",
+          "endTime": "3030-08-01T15:00:00-04:00",
+          "venueId": "conventionCenter",
+          "roomId": "mainHall"
+        },
+        {
+          "startTime": "3030-08-02T10:00:00-04:00",
+          "endTime": "3030-08-02T11:00:00-04:00",
+          "venueId": "furCafe",
+          "roomId": "backPatio"
+        }
+      ],
       "typeId": "meetup",
       "trackId": null,
       "labelIds": [],
@@ -238,6 +254,9 @@
         "vendorId": "Vendor-Sys-XYZ",
         "appVersion": "1.0.3",
         "lastModifiedBy": "VendorBot"
+      },
+      "x-meta": {
+        "badgeLevel": "CustomDataForExternalApps"
       }
     },
     {
@@ -248,10 +267,15 @@
       "description": {
         "en-US": "Workshop on painting anthropomorphic characters."
       },
-      "startTime": "3030-08-01T14:00:00-04:00",
-      "endTime": "3030-08-01T16:00:00-04:00",
-      "venueId": "conventionCenter",
-      "roomId": "artRoom",
+      "timeSlots": [
+        {
+          "startTime": "3030-08-01T14:00:00-04:00",
+          "endTime": "3030-08-01T16:00:00-04:00",
+          "venueId": "conventionCenter",
+          "roomId": "artRoom",
+          "roomAliasIds": ["100A"]
+        }
+      ],
       "typeId": "workshop",
       "trackId": "artTrack",
       "labelIds": ["aslInterpretation"],
@@ -269,10 +293,14 @@
       "description": {
         "en-US": "An after-dark social event for adult attendees."
       },
-      "startTime": "3030-08-01T23:00:00-04:00",
-      "endTime": "3030-08-02T01:00:00-04:00",
-      "venueId": "furCafe",
-      "roomId": "backPatio",
+      "timeSlots": [
+        {
+          "startTime": "3030-08-01T23:00:00-04:00",
+          "endTime": "3030-08-02T01:00:00-04:00",
+          "venueId": "furCafe",
+          "roomId": "backPatio"
+        }
+      ],
       "typeId": "panel",
       "trackId": null,
       "labelIds": ["18plus", "ticketed"],

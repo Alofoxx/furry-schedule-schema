@@ -38,8 +38,8 @@ The **Furry Schedule Schema** provides a JSON-based data structure for:
 Example (Node.js + AJV):
 
 ```bash
-npm install -g ajv-cli
-ajv validate -s schema/furry-schedule-schema.json -d examples/sampleSchedule.json
+npm install
+npm run validate
 ```
 4. Integrate the resulting JSON into your website or application.
 

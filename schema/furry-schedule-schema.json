@@ -3,7 +3,6 @@
   "$id": "https://github.com/Alofoxx/furry-schedule-schema/schema/furry-schedule-schema.json",
   "title": "Furry Schedule Schema (Master)",
   "type": "object",
-
   "properties": {
     "schemaVersion": {
       "type": "string"
@@ -26,6 +25,9 @@
       },
       "additionalProperties": true
     },
+    "x-meta": {
+      "$ref": "partials/x-meta.schema.json"
+    },
     "convention": {
       "$ref": "convention.schema.json"
     },
@@ -45,7 +47,7 @@
       "$ref": "venues.schema.json"
     },
     "rooms": {
-      "$ref": "room.schema.json"
+      "$ref": "rooms.schema.json"
     },
     "hosts": {
       "$ref": "hosts.schema.json"
@@ -54,7 +56,6 @@
       "$ref": "events.schema.json"
     }
   },
-
   "required": [
     "schemaVersion",
     "updatedAt",
@@ -67,6 +68,5 @@
     "hosts",
     "events"
   ],
-
   "additionalProperties": false
 }

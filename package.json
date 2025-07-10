@@ -1,0 +1,23 @@
+{
+  "name": "furry-schedule-schema",
+  "version": "1.0.0",
+  "description": "Open JSON schema for representing schedules at furry conventions.",
+  "author": "Alofoxx",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alofoxx/furry-schedule-schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alofoxx/furry-schedule-schema/issues"
+  },
+  "homepage": "https://github.com/Alofoxx/furry-schedule-schema#readme",
+  "scripts": {
+    "validate": "node validate.js"
+  },
+  "dependencies": {
+    "ajv": "^8.0.0",
+    "ajv-formats": "^2.1.1"
+  }
+}
