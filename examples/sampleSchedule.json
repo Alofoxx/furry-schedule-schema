@@ -272,7 +272,8 @@
           "startTime": "3030-08-01T14:00:00-04:00",
           "endTime": "3030-08-01T16:00:00-04:00",
           "venueId": "conventionCenter",
-          "roomId": "artRoom"
+          "roomId": "artRoom",
+          "roomAliasIds": ["100A"]
         }
       ],
       "typeId": "workshop",
