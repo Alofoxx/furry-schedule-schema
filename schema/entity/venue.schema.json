@@ -5,8 +5,7 @@
   "type": "object",
   "required": [
     "id",
-    "name",
-    "address"
+    "name"
   ],
   "properties": {
     "id": {
@@ -21,12 +20,7 @@
       }
     },
     "address": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-z]{2}(-[A-Z]{2})?$": {
-          "type": "string"
-        }
-      }
+      "type": "string"
     },
     "x-meta": {
       "$ref": "../partials/x-meta.schema.json"
