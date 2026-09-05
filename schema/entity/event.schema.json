@@ -6,10 +6,7 @@
   "required": [
     "id",
     "title",
-    "timeSlots",
-    "typeId",
-    "allowedMemberships",
-    "ticketed"
+    "timeSlots"
   ],
   "properties": {
     "id": {

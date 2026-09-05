@@ -112,13 +112,15 @@ Schedule entries:
   - `roomId` (string): Links to a room by its `id`. The primary room this slot takes place in (e.g., 100AB or 'Main Events').
   - `roomAliasIds` (array of strings, optional): Alternate room IDs relevant for search or discovery. Useful when an event spans multiple rooms (e.g., 100A + 100B).
   - `x-meta` (object, optional): Application-defined metadata per time slot.
-- **typeId** (string): Links to an entry in `eventTypes`.
+- **typeId** (string, optional): Links to an entry in `eventTypes`.
 - **trackId** (string or null, optional): Links to an entry in `tracks`.
 - **labelIds** (array of strings): Zero or more `id` values from `labels`.
 - **hostIds** (array of strings): Zero or more `id` values from `participants`.
-- **allowedMemberships** (array of strings): Which membership levels can attend.
+- **allowedMemberships** (array of strings, optional): Membership levels permitted to attend.
+  If omitted, the event has no membership-level restriction.
 - **minAge** (integer, optional): Minimum required age (default 0).
-- **ticketed** (boolean, optional): If the event requires a separate ticket.
+- **ticketed** (boolean, optional): Whether the event requires a separate ticket.
+  If omitted, consumers should treat the event as not ticketed.
 - **imageBannerUrl** (string, optional): Link to an event banner image.
 - **buttons** (array, optional): List of call-to-action objects, each with:
   - `name` (string)
