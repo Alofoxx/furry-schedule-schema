@@ -141,18 +141,14 @@
       "name": {
         "en-US": "Furtown Convention Center"
       },
-      "address": {
-        "en-US": "123 Fur Ave, Furville"
-      }
+      "address": "123 Fur Ave, Furville"
     },
     {
       "id": "furCafe",
       "name": {
         "en-US": "Fur Café (Off-Site)"
       },
-      "address": {
-        "en-US": "999 Coffee St, Furville"
-      }
+      "address": "999 Coffee St, Furville"
     }
   ],
   "rooms": [

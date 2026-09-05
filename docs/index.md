@@ -74,7 +74,7 @@ Locations where events are held:
 
 - **id** (string)
 - **name** (object): Localized
-- **address** (object, optional): Localized
+- **address** (object, optional): Physical address of the venue.
 
 ## rooms (array)
 
